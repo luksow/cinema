@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Repertuar kin</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" data-auto-replace-svg="nest"></script>
+  <body>
+    <div class="layout">
+
+        <div class="page_title">Wyszukiwarka repertuaru kin Cinema-City
+            <div class="show_hide_settings">
+                <p class="show_hide_text">ukryj</p>
+                <p class="show_hide_text2"> szczegóły wyszukiwania</p>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="date">
+                <div class="date-title"><!--Dzień:--></div>
+                <div class="fri-sat-sun">
+                    <div class="fri weekday to_click inactive-day">pt</div>
+                    <div class="sat weekday to_click">sob</div>
+                    <div class="sun weekday to_click">nd</div>
+                </div>
+                <div class ="mon-tue-wed-thu">
+                    <div class="mon weekday to_click">pon</div>
+                    <div class="tue weekday to_click">wt</div>
+                    <div class="wed weekday to_click">śr</div>
+                    <div class="thu weekday to_click">czw</div>  
+                </div>        
+            </div>
+            <div class="cinema_movie">
+                <div class="cinema">
+                    <label for="cinema" id="cinema_title"><!--Kino:--></label><br>  
+                    <select id="cinema" class="">
+                         <!--
+                        <option>Wszystkie</option>
+                        <option>Opcja</option>
+                        -->
+                    </select>     
+                </div>
+                <div class="movie">
+                    <label for="movie" id="movie_title"><!--Film:--></label><br>  
+                    <select id="movie" class="">
+                        <!--
+                        <option>Wszystkie</option>
+                        <option>Opcja</option>
+                        -->
+                    </select>  
+                </div>
+            </div>
+
+            <div class="selection_panel">
+                <!--
+                <div class="watching_selection_title">Wyświetl:</div>
+                <div class="watching_selection">
+                    <div class="watching_selection_allmovies current to_click">wszystkie filmy</div>
+                    <div class="watching_selection_towatch to_click">tylko "chcę obejrzeć"</div>
+                    <div class="watching_selection_watched to_click">bez obejrzanych</div>
+                </div>
+                -->
+
+                <!--
+                <div class="pl_waw_krk_title">Wyświetl:</div>
+                <div class="pl_waw_krk">
+                    <div class="pl current to_click">
+                        <div class="pl-title">wszystkie kina</div>
+                        <div class="pl_pic city_pic"><img src="img/pl.png" height="60"></div>
+                    </div>
+                    <div class="waw to_click">
+                        <div class="waw-title">tylko kina warszawskie</div>
+                        <div class="waw_pic city_pic"><img src="img/waw.png" height="60"></div>
+                    </div>
+                    <div class="krk to_click">
+                        <div class="krk-title">tylko kina krakowskie</div>
+                        <div class="krk_pic city_pic"><img src="img/krk.png" height="50"></div>
+                    </div>
+                </div>
+                -->
+            </div>
+            <div class="icons_panel">
+                
+                    <div class="watching_icons_towatch">
+                        <i class="watching_icon towatch_main fas fa-eye fa-2x"></i>
+                    </div>
+                    <div class="watching_panel_towatch">
+                        <ul class="towatch_list"></ul>
+                    </div>
+                
+                    <div class="watching_icons_watched">
+                        <i class="watching_icon watched_main far fa-calendar-check fa-2x"></i>
+                    </div>
+                    <div class="watching_panel_watched">
+                        <ul class="watched_list"></ul>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="results full_screen_height">
+            <div class="results_for_cinema">
+                <div class="cinema_info">
+                    <!--
+
+                    -->
+                </div>
+                <ul class="cinema_results_list">
+                    <!--
+                    
+                    -->
+                </ul>
+            </div>
+
+            <div class="results_for_movie">
+                <div class="movie_info">
+                    <!--
+                    
+                    -->
+                </div>
+                <ul class="movie_results_list">
+                    <!--
+
+                    -->
+                </ul>
+            </div>
+                
+        </div>
+
+        <div class="theend">
+            <!--
+                The end.
+            -->
+        </div>
+  </div>
+  <div class="author_credits">
+    <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
