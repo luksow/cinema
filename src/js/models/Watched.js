@@ -1,36 +1,28 @@
 export class Watching {
     constructor(movie) {
-        // this.movie = movie;
         this.watchingList = [];
     }
     
     addItem(movieID, movieName, moviePoster, listType) {
         const item = { movieID, movieName, moviePoster, listType };
         this.watchingList.push(item);
-        
-        // persist data in localStorage
-        this.persistData();
-        
+        this.persistData();  
         return item;
     }
     
     deleteItem(movieID) {
         const index = this.watchingList.findIndex(el => el.movieID  === movieID);
         this.watchingList.splice(index, 1);
-        
-        // persist data in localStorage
         this.persistData();
     }
     
     changeType(movieID, listType) {
         const x = this.watchingList.findIndex(el => el.movieID === movieID);
         this.watchingList[x].listType = listType;
-        //console.log(this.watchingList[x]);
         return this.watchingList[x];
     }
 
     isOnList(movieID) {
-        //console.log(this.watchingList);
         const x = this.watchingList.findIndex(el => el.movieID === movieID);
         if (x !== -1) {
             return this.watchingList[x].listType;

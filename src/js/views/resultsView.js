@@ -1,6 +1,5 @@
 import { elements, clearContent } from './base';
 import { watchingChanges } from '../index'
-// import { toggleWatchingBtn } from './watchedView';
 
 const fixedTrailer = (oldURL) => {
     const newURL = oldURL.replace("watch?v=", "embed/");
@@ -43,7 +42,6 @@ const renderAgeLimits = (ageLimit) => {
 }
 
 const fixedTime = (oldTime) => {
-    // string od T wyłączywszy go i 5 następnych znaków
     const newTime = oldTime.split('T')[1].slice(0, 5);
     return newTime;
 }
@@ -194,7 +192,6 @@ const renderCinemaResultsWawKrk = (result) => {
         `
         document.querySelector(`.time_${result.movieID}`).insertAdjacentHTML('beforeend', markup2);
     };
-    // watchingChanges();
 };
 
 export const renderResultsForCinemaWawKrk = (list) => {
@@ -229,7 +226,6 @@ export const renderMovieInfo = (movieDetails) => {
         </div>
     `;
     elements.movieInfo().insertAdjacentHTML('beforeend', markup);
-    // watchingChanges();
 };
 
 const renderMovieResults = result => {

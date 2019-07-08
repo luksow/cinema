@@ -1,28 +1,5 @@
 import { elements, clearContent } from '../views/base';
 
-// export const orderedMovies = (events) => {
-//     const ordMovies = [];
-//     events.forEach((e) => {
-//         const filmArray = ordMovies[e.film.name];
-//         if (!filmArray) {
-//             ordMovies[e.film.name] = [];
-//         }
-//         ordMovies[e.film.name].push(e);
-//     })
-//     console.log(ordMovies);
-
-//     return ordMovies;
-// }
-
-// export const checkCinemaNamesWawKrk = (cinemaID) => {
-//     const IDs = ["1074", "1061", "1096", "1070", "1069", "1068", "1060", "1090", "1076", "1063", "1064"];
-//     const names = ["Arkadia", "Bemowo", "Białołęka Galeria Północna", "Galeria Mokotów", "Janki", "Promenada", "Sadyba", "Bonarka", "Galeria Kazimierz", "Galeria Plaza", "Zakopianka"];
-//     const indexNumber = IDs.indexOf(cinemaID);
-//     if (indexNumber > -1) {
-//         const cinemaName = names[indexNumber];
-//     } 
-// }
-
 export const arrForCinema = (moviesList) => {
     const movieAndEventInfo = [];
     moviesList.forEach(movie => {
@@ -77,11 +54,9 @@ export const getMovieID = (htmlclass, textToRidOff) => {
 };
 
 export const movieDate = (moviesList, givenID) => {
-    // console.log(moviesList);
-    // console.log(givenID);
-    const a = moviesList.filter(el => el.id === givenID);
-    console.log(a);
-    return a[0];
+    const list = moviesList.filter(el => el.id === givenID);
+    console.log(list);
+    return list[0];
 }
 
 

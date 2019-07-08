@@ -5,9 +5,6 @@ import { elements, clearContent } from './base';
 import { Search } from '../models/Search';
 
 
-
-// wyswietl dostepne dni do wyboru
-
 export const chooseDay = () => {
     clearContent(elements.dateTitle);
     const markup = `Wybierz dzień`;
@@ -18,7 +15,7 @@ export const chooseDay = () => {
 
 export const changeDay = () => {
     clearContent(elements.dateTitle);
-    const markup = `Możesz zmienić dzień`;
+    const markup = `Zmień dzień`;
     elements.dateTitle.insertAdjacentHTML('beforeend', markup);
 }
 
@@ -79,9 +76,6 @@ export const inactiveClass = () => {
     inactive.forEach(event => event.classList.add("inactive-day"));
     noInactive.forEach(event => event.classList.remove("inactive-day"));
 };
-
-
-// odczytaj, jaki dzień wybrał użytkownik
 
 const currentDay = (clickedDay) => {
     [elements.friday, elements.saturday, elements.sunday, elements.monday, elements.tuesday, elements.wednesday, elements.thursday].forEach(event => event.classList.remove("current"));
@@ -145,8 +139,6 @@ export const addDays = (clickedDay) => {
     }
 }
 
-// loader
-
 export const renderLoader = parent => {
     const loader = `
         <div class="loader">
@@ -163,9 +155,6 @@ export const clearLoader = () => {
     if (loader) loader.parentElement.removeChild(loader);
 };
 
-
-// wyświetl odpowiednie filmy i kina do wyboru dla danego dnia
-
 const renderCinemaName = (name) => {
     const markup = `<option value="${name}">${name}</option>`;
     elements.searchCinema().insertAdjacentHTML('beforeend', markup);
@@ -178,7 +167,6 @@ export const renderCinemasNames = (cinemas) => {
     const markup2 = `<option>Warszawa - wszystkie kina</option>`;
     const markup3 = `<option>Kraków - wszystkie kina</option>`;
     [markup1, markup2, markup3].forEach(e => elements.searchCinema().insertAdjacentHTML('beforeend', (e)));
-    // elements.searchCinema().insertAdjacentHTML('beforeend', `<option>wszystkie</option>`);
     names.forEach(renderCinemaName);
 };
 
@@ -206,9 +194,6 @@ export const searchSettings = () => {
     }
 };
 
-
-
-// odczytaj, jaki film/kino wybrał użytkownik
 
 export const getCinema = () => elements.searchCinema().value;
 export const getMovie = () => elements.searchMovie().value;

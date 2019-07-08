@@ -26,7 +26,6 @@ const renderWatchingInfoFromLocalStorage = () => {
     console.log(state.watchingList);
     state.watchingList.watchingList.forEach(item => {
         watchedView.renderItem(item);
-        console.log(item.moviePoster);
     });
 };
 
@@ -35,8 +34,6 @@ export const controlSearch = async (weekDay) => {
     const queryDate = searchingView.addDays(weekDay);
 
     if (queryDate) {
-        
-        // new search object and add to state
         state.searchDate = new Search(queryDate);
         window.scrollTo(0,0);
         elements.res().classList.add('full_screen_height');
@@ -46,13 +43,10 @@ export const controlSearch = async (weekDay) => {
         searchingView.renderLoader(elements.res());
 
         try {
-        // search for date
             await state.searchDate.getResults();
             console.log(state.searchDate)
             console.log(state.searchDate.getCinemas());
             console.log(state.searchDate.getMovies());
-
-            // wyświetl odpowiednie kina i filmy dla wybranej daty
             searchingView.clearLoader();
             searchingView.changeDay();
             searchingView.chooseCinemaMovie();
@@ -145,7 +139,7 @@ const cinRes = (whichMovies) => {
 
 const resultsForACinema = (whichMovies) => {
     state.getCinema = searchingView.getCinema();
-    state.getMovie = null; // spoko? potrzeba coś takiego? i analogicznie przy odczytywaniu filmów?
+    state.getMovie = null;
     console.log(state.getCinema);
     window.scrollTo(0,0);
     resultsView.clearWhenSearchChange();
