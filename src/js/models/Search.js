@@ -7,7 +7,7 @@ export class Search {
     }
     async getResults() {
         try {
-            this.resultForDate = await axios(`http://cc.iterato.rs/api/programme?date=${this.queryDate}`);
+            this.resultForDate = await axios(`https://cc.iterato.rs/api/programme?date=${this.queryDate}`);
             console.log(this.resultForDate);
         } catch (error) {
             alert(error);
